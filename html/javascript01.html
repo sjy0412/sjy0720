@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style >
+			img{
+				width:400px;
+				height: auto;
+			}
+			.show {
+				display: block;
+			}
+			.hidden {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div  id="img1" >
+			<img src="../img/1549640783632.jpeg" >
+		</div>
+		<br>
+		<input type="button"  id="btn" value="隐藏" />
+	</body>
+	<script type="text/javascript">
+		// 1获取元素
+		var btn = document.getElementById('btn');
+		// 2给按钮注册事件
+		var isShow = true;
+		btn.onclick = function () {
+			// 3控制div的显示隐藏
+			var img1 = document.getElementById('img1');
+			if (isShow) {
+				// DOM对象的对应标签的class属性的名字叫className
+				img1.className = 'hidden';
+				this.value = '显示';
+				 isShow = false;  
+			}else {
+				img1.className = 'show';
+				this.value = '隐藏';
+				isShow = true;
+			}	
+		}
+		
+		// 4改变按钮中的文字 
+	</script>
+</html>
